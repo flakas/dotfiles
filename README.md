@@ -38,3 +38,16 @@ Installation
   * `tmux/.tmux.conf` -> `~/.tmux.conf`
   * `vim/.vimrc` -> `~/.vimrc`
 - Follow Command-T setup instructions
+
+### i3
+
+To get screen brightness controls to work `xbacklight` is necessary.
+
+But if `xbacklight` returns `No outputs have backlight property`, then add this to `/etc/X11/xorg.conf`:
+
+```
+  Section "Device"
+     Identifier  "Intel Graphics"
+     Driver      "intel"
+  EndSection
+```
