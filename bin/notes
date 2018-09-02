@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# Note taking script.
+# Creates or reuses a `~/notes/<DAY>` text file for note taking of that day.
+
+if [ $# -eq 0 ] 
+then
+  FILENAME=`date +%Y-%m-%d`
+else
+  FILENAME=$1
+fi
+
+FILE=~/notes/$FILENAME
+
+if [ -f "$FILE" ]
+then
+  # Nothing
+  echo $FILE
+else
+    echo "# DONE\n\n# TODO\n\n# Notes" > $FILE
+fi
+
+cd ~/notes
+vim $FILE
