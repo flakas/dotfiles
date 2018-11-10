@@ -175,3 +175,10 @@ bindsym --release Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png 
 bindsym --release Mod1+Sys_Req exec "import -window `xwininfo | awk '/.*Window id:.*/ {print $4}'` ~/Pictures/$(date --iso-8601='seconds').png"
 # Selection screenshot
 bindsym --release Shift+Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png -s -e 'xclip -selection c -t image/png < $f'"
+
+# Startup
+## Wifi applet
+exec --no-startup-id nm-applet
+
+## Redshift - screen color temperature adjustment, f.lux alternative
+exec --no-startup-id redshift
