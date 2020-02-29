@@ -81,6 +81,12 @@ call vundle#rc()
 Plugin 'VundleVim/Vundle.vim'
 " Additional plugins
 
+set rtp+=~/.fzf
+
+Plugin 'junegunn/fzf.vim'
+nmap <Leader>f :GFiles<CR>
+nmap <Leader>F :Files<CR>
+
 " Colors
 Plugin 'altercation/vim-colors-solarized'
 set t_Co=256
