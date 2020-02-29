@@ -118,6 +118,12 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 
 Plugin 'Lokaltog/vim-easymotion'
 
+Plugin 'elixir-editors/vim-elixir'
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex set filetype=eelixir
+
+Plugin 'editorconfig/editorconfig-vim'
+
 " Testing end
 
 filetype plugin indent on " required
