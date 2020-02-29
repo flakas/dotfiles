@@ -166,8 +166,8 @@ bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 '-5%'
 bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 '+5%'
 bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute 0 toggle
 bindsym XF86AudioMicMute exec /usr/bin/pactl set-source-mute 1 toggle
-bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 1
+bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 1
 
 # Desktop screenshot
 bindsym --release Print exec "scrot ~/Pictures/$(date --iso-8601='seconds').png -m -e 'xclip -selection c -t image/png < $f'"
