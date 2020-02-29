@@ -85,7 +85,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 set t_Co=256
 color solarized
-set background=dark
+set background=light
 set guifont=Monospace\ 11
 syntax on
 
