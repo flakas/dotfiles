@@ -185,3 +185,6 @@ exec --no-startup-id redshift
 
 ## Remap Caps-Lock to Control
 exec --no-startup-id setxkbmap -option caps:ctrl_modifier
+
+## Start the gnome keyring
+exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
