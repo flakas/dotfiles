@@ -130,6 +130,9 @@ au BufRead,BufNewFile *.eex set filetype=eelixir
 
 Plugin 'editorconfig/editorconfig-vim'
 
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
 " Testing end
 
 filetype plugin indent on " required
