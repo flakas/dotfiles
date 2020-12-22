@@ -133,6 +133,9 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+Plugin 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 " Testing end
 
 filetype plugin indent on " required

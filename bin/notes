@@ -17,7 +17,7 @@ then
   # Nothing
   echo $FILE
 else
-    echo "# DONE\n\n# TODO\n\n# Notes" > $FILE
+    echo "# DONE\n\n# TODO\n## Work\n\n## Personal\n\n# Notes" > $FILE
 fi
 
 cd ~/notes
