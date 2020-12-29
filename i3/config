@@ -93,28 +93,28 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+aogonek workspace 1
-bindsym $mod+ccaron workspace 2
-bindsym $mod+eogonek workspace 3
-bindsym $mod+eabovedot workspace 4
-bindsym $mod+iogonek workspace 5
-bindsym $mod+scaron workspace 6
-bindsym $mod+uogonek workspace 7
-bindsym $mod+umacron workspace 8
-bindsym $mod+doublelowquotemark workspace 9
-bindsym $mod+leftdoublequotemark workspace 10
+bindsym $mod+"1" workspace 1
+bindsym $mod+"2" workspace 2
+bindsym $mod+"3" workspace 3
+bindsym $mod+"4" workspace 4
+bindsym $mod+"5" workspace 5
+bindsym $mod+"6" workspace 6
+bindsym $mod+"7" workspace 7
+bindsym $mod+"8" workspace 8
+bindsym $mod+"9" workspace 9
+bindsym $mod+"0" workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+aogonek move container to workspace 1
-bindsym $mod+Shift+ccaron move container to workspace 2
-bindsym $mod+Shift+eogonek move container to workspace 3
-bindsym $mod+Shift+eabovedot move container to workspace 4
-bindsym $mod+Shift+iogonek move container to workspace 5
-bindsym $mod+Shift+scaron move container to workspace 6
-bindsym $mod+Shift+uogonek move container to workspace 7
-bindsym $mod+Shift+umacron move container to workspace 8
-bindsym $mod+Shift+doublelowquotemark move container to workspace 9
-bindsym $mod+Shift+leftdoublequotemark move container to workspace 10
+bindsym $mod+Shift+"1" move container to workspace 1
+bindsym $mod+Shift+"2" move container to workspace 2
+bindsym $mod+Shift+"3" move container to workspace 3
+bindsym $mod+Shift+"4" move container to workspace 4
+bindsym $mod+Shift+"5" move container to workspace 5
+bindsym $mod+Shift+"6" move container to workspace 6
+bindsym $mod+Shift+"7" move container to workspace 7
+bindsym $mod+Shift+"8" move container to workspace 8
+bindsym $mod+Shift+"9" move container to workspace 9
+bindsym $mod+Shift+"0" move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -162,10 +162,10 @@ workspace_auto_back_and_forth yes
 bindsym $mod+Control+l exec i3-msg workspace 99 && i3lock -c 666666 -d && i3-msg workspace 1
 
 # ThinkPad bindings
-bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 0 '-5%'
-bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 0 '+5%'
-bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute 0 toggle
-bindsym XF86AudioMicMute exec /usr/bin/pactl set-source-mute 1 toggle
+bindsym XF86AudioLowerVolume exec /usr/bin/pactl set-sink-volume 1 '-5%'
+bindsym XF86AudioRaiseVolume exec /usr/bin/pactl set-sink-volume 1 '+5%'
+bindsym XF86AudioMute exec /usr/bin/pactl set-sink-mute 1 toggle
+bindsym XF86AudioMicMute exec /usr/bin/pactl set-source-mute 2 toggle
 bindsym XF86MonBrightnessUp exec /usr/bin/xbacklight -inc 1
 bindsym XF86MonBrightnessDown exec /usr/bin/xbacklight -dec 1
 
@@ -184,7 +184,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id redshift
 
 ## Remap Caps-Lock to Control
-exec --no-startup-id setxkbmap -option caps:ctrl_modifier
+exec --no-startup-id setxkbmap -layout us,lt -option 'grp:alt_shift_toggle' -option caps:ctrl_modifier
 
 ## Start the gnome keyring
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+
