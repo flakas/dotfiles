@@ -37,6 +37,7 @@ Installation
   * `i3/` -> `~/.config/i3`
   * `tmux/.tmux.conf` -> `~/.tmux.conf`
   * `vim/.vimrc` -> `~/.vimrc`
+  * `redshift/redshift.conf` -> `~/.config/redshift.conf`
 - Follow Command-T setup instructions
 
 ### i3
