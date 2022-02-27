@@ -10,7 +10,7 @@ else
   FILENAME=$1
 fi
 
-FILE=~/notes/$FILENAME
+FILE=~/Documents/notes/$FILENAME
 
 if [ -f "$FILE" ]
 then
@@ -20,5 +20,5 @@ else
     echo "# DONE\n\n# TODO\n## Work\n\n## Personal\n\n# Notes" > $FILE
 fi
 
-cd ~/notes
-vim $FILE
+cd ~/Documents/notes
+nvim $FILE
