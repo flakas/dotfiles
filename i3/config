@@ -189,3 +189,5 @@ exec --no-startup-id setxkbmap -layout us,lt -option 'grp:alt_shift_toggle' -opt
 ## Start the gnome keyring
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
 
+## Start Rescuetime time tracker
+exec --no-startup-id rescuetime
