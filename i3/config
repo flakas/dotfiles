@@ -221,3 +221,7 @@ exec --no-startup-id setxkbmap -layout us,lt -option 'grp:alt_shift_toggle' -opt
 
 ## Rescuetime time tracker (disabled)
 #exec --no-startup-id rescuetime
+
+# Copilot button bindings for speech-to-text
+bindsym $mod+Shift+XF86TouchpadOff exec --no-startup-id ~/dotfiles/bin/speech_to_text.sh press
+bindsym --release $mod+Shift+XF86TouchpadOff exec --no-startup-id ~/dotfiles/bin/speech_to_text.sh release
