@@ -74,8 +74,8 @@ set clipboard=unnamedplus
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Required!
 Plugin 'VundleVim/Vundle.vim'
@@ -83,17 +83,13 @@ Plugin 'VundleVim/Vundle.vim'
 
 set rtp+=~/.fzf
 
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 nmap <Leader>f :GFiles<CR>
 nmap <Leader>F :Files<CR>
 
 " Colors
 Plugin 'altercation/vim-colors-solarized'
-set t_Co=256
-color solarized
-set background=light
-set guifont=Monospace\ 11
-syntax on
 
 Plugin 'kien/rainbow_parentheses.vim'
 au VimEnter * RainbowParenthesesToggle
@@ -104,6 +100,7 @@ au Syntax * RainbowParenthesesLoadBraces
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'wincent/Command-T'
+let g:CommandTPreferredImplementation='lua'
 
 Plugin 'scrooloose/nerdcommenter'
 
@@ -120,7 +117,7 @@ match ExtraWhitespace '\s\+$'
 
 " Testing driving new plugins
 Plugin 'bkad/CamelCaseMotion'
-call camelcasemotion#CreateMotionMappings('<leader>')
+let g:camelcasemotion_key = '<leader>'
 
 Plugin 'Lokaltog/vim-easymotion'
 
@@ -136,7 +133,15 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
+call vundle#end()
+
 " Testing end
+
+syntax enable
+set t_Co=256
+colorscheme solarized
+set background=light
+set guifont=Monospace\ 11
 
 filetype plugin indent on " required
 
