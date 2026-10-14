@@ -5,9 +5,9 @@ set scrolloff=3
 set backspace=indent,eol,start
 
 "Set tabstop width
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
 "Tabs to spaces
 set expandtab
@@ -132,6 +132,25 @@ Plugin 'plasticboy/vim-markdown'
 
 Plugin 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
+
+Plugin 'github/copilot.vim'
+
+" AI experiments
+Plugin 'stevearc/dressing.nvim'
+Plugin 'nvim-lua/plenary.nvim'
+Plugin 'MunifTanjim/nui.nvim'
+Plugin 'ColinKennedy/mega.logging'
+Plugin 'ColinKennedy/mega.cmdparse'
+
+" Optional deps
+Plugin 'nvim-tree/nvim-web-devicons' "or Plug 'echasnovski/mini.icons'
+Plugin 'HakonHarnes/img-clip.nvim'
+Plugin 'zbirenbaum/copilot.lua'
+
+Plugin 'yetone/avante.nvim'
+"autocmd! User avante.nvim lua << EOF
+"require('avante_lib').load()
+"EOF
 
 call vundle#end()
 

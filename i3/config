@@ -218,3 +218,6 @@ exec --no-startup-id redshift
 
 ## US + Lithuanian layouts (Alt+Shift to switch), Caps-Lock as Control
 exec --no-startup-id setxkbmap -layout us,lt -option 'grp:alt_shift_toggle' -option caps:ctrl_modifier
+
+## Rescuetime time tracker (disabled)
+#exec --no-startup-id rescuetime

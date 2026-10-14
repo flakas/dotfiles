@@ -31,6 +31,9 @@ Plugins (managed by Vundle):
 - vim-easymotion
 - vim-elixir, vim-markdown, tabular, editorconfig-vim
 - Tagbar (`F8`)
+- copilot.vim
+- avante.nvim (experimental, not set up yet) and its deps: dressing.nvim, plenary.nvim, nui.nvim,
+  mega.logging, mega.cmdparse, nvim-web-devicons, img-clip.nvim, copilot.lua
 
 ### i3
 
