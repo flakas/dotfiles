@@ -1,0 +1,27 @@
+#!/bin/sh
+# Idle handling for i3. X blanks the screen itself (xset timeout) and xss-lock
+# locks it; this suspends after SUSPEND_AFTER idle seconds on battery.
+# Neither happens while an app holds a screensaver inhibit (video, presenting),
+# the mic is in use (calls), or stay-awake is toggled on.
+SUSPEND_AFTER=900
+RUN="${XDG_RUNTIME_DIR:-/tmp}"
+INHIBIT="$RUN/idle-inhibited"
+MANUAL="$RUN/stay-awake"
+
+rm -f "$INHIBIT"
+# xssproxy answers org.freedesktop.ScreenSaver.Inhibit; track its state from its log.
+xssproxy -v 2>&1 | while read -r line; do
+    case "$line" in
+        "Disabling screensaver") touch "$INHIBIT" ;;
+        "Enabling screensaver") rm -f "$INHIBIT" ;;
+    esac
+done &
+
+while sleep 30; do
+    if [ -e "$INHIBIT" ] || [ -e "$MANUAL" ] || "$(dirname "$0")/mic-in-use"; then
+        xset s reset
+    elif [ "$(xprintidle)" -ge $((SUSPEND_AFTER * 1000)) ] &&
+         grep -q Discharging /sys/class/power_supply/BAT0/status; then
+        systemctl suspend
+    fi
+done

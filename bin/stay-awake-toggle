@@ -1,0 +1,8 @@
+#!/bin/sh
+# Toggle "stay awake": no blanking, locking or idle suspend until toggled off.
+f="${XDG_RUNTIME_DIR:-/tmp}/stay-awake"
+if [ -e "$f" ]; then
+    rm -f "$f" && notify-send -t 3000 "Stay awake: off"
+else
+    touch "$f" && xset s reset && notify-send -t 3000 "Stay awake: on"
+fi

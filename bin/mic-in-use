@@ -1,0 +1,3 @@
+#!/bin/sh
+# Exit 0 if any microphone/capture device is currently recording (e.g. in a call).
+grep -qs 'state: RUNNING' /proc/asound/card*/pcm*c/sub*/status
